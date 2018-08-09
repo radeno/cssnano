@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline}
-html{line-height:1}
+html{font-size:100%;line-height:1;line-height:1.625em}
 ol,ul{list-style:none}
 caption,td,th{font-weight:400;text-align:left;vertical-align:middle}
 blockquote,q{quotes:none}
@@ -10,7 +10,6 @@ a img{border:none}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 .pull_right{float:right}
 .pull_left{float:left}
-html{font-size:100%;line-height:1.625em}
 *{box-sizing:border-box}
 body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#fff;color:#555;font-family:Open Sans;font-weight:400;position:relative}
 @media only screen and (max-width:767px){
@@ -357,9 +356,9 @@ dl dt{font-size:16px;font-size:1rem;font-weight:700}
   dl,ol,p,ul{text-align:left}
 }
 em{font-style:italic}
-em,strong{line-height:inherit}
 strong{font-weight:700}
-small{font-size:56.4%;line-height:inherit}
+em,small,strong{line-height:inherit}
+small{font-size:56.4%}
 h1 small,h2 small,h3 small,h4 small,h5 small{color:#777}
 blockquote{border-left:5px solid #ccc;margin:0 0 18px;padding:9px 20px 0 19px}
 blockquote,blockquote p{color:#777;line-height:20px}
@@ -375,9 +374,9 @@ abbr{text-transform:none}
   p a[href]:after{content:" (" attr(href) ")"}
   abbr[title]:after{content:" (" attr(title) ")"}
   a[href^="#"]:after,a[href^="javascript:"]:after{content:""}
-  blockquote,pre{border:1px solid #999;page-break-inside:avoid}
+  blockquote,pre{border:1px solid #999}
   thead{display:table-header-group}
-  img,tr{page-break-inside:avoid}
+  blockquote,img,pre,tr{page-break-inside:avoid}
 @page{margin:.5cm}
   h2,h3,p{orphans:3;widows:3}
   h2,h3{page-break-after:avoid}
@@ -836,9 +835,9 @@ img{-ms-interpolation-mode:bicubic}
 .valign:before{content:" ";height:400px;margin-right:-.25em}
 .valign:before,.valign>article,.valign>div,.valign>figure,.valign>section{display:inline-block;vertical-align:middle}
 @media only screen and (max-width:767px){
-  body{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;min-width:0;width:100%}
+  body{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;min-width:0}
   .container,.row{margin-left:0;margin-right:0;min-width:0}
-  .row{width:100%}
+  .row,body{width:100%}
   .row .row .column,.row .row .columns{padding:0}
   .row .centered{margin-left:0!important}
   .column,.columns{margin-left:0;width:auto!important}
@@ -998,9 +997,8 @@ img{-ms-interpolation-mode:bicubic}
 .btn.secondary:hover,.skiplink.secondary:hover{background:#5bbd73}
 .btn.secondary:active,.skiplink.secondary:active{background:#337f46}
 .btn.default,.skiplink.default{background:#f2f2f2;border:1px solid #f2f2f2;color:#555}
-.btn.default:hover,.skiplink.default:hover{background:#fff}
+.btn.default:hover,.skiplink.default:hover{background:#fff;border:1px solid #e5e5e5}
 .btn.default:active,.skiplink.default:active{background:#d8d8d8}
-.btn.default:hover,.skiplink.default:hover{border:1px solid #e5e5e5}
 .btn.default a,.btn.default button,.btn.default input,.skiplink.default a,.skiplink.default button,.skiplink.default input{color:#555}
 .btn.info,.skiplink.info{background:#4a4d50;border:1px solid #4a4d50}
 .btn.info:hover,.skiplink.info:hover{background:#63676a}
@@ -1164,9 +1162,8 @@ label+.narrow:last-child,label+.normal:last-child,label+.wide:last-child,label+.
 .badge.light,.label.light{background:#fff;border:1px solid #f2f2f2;color:#555}
 .badge.light a,.label.light a{color:#d04526}
 .badge.dark,.label.dark{background:#212121;border:1px solid #212121}
-.badge{border-radius:10px;font-size:14px;font-size:.875rem}
-.badge,.label{padding:0 10px}
-.label{border-radius:2px;font-size:12px;font-size:.75rem}
+.badge{border-radius:10px;font-size:14px;font-size:.875rem;padding:0 10px}
+.label{border-radius:2px;font-size:12px;font-size:.75rem;padding:0 10px}
 .alert{border-radius:4px;font-family:Open Sans;font-size:14px;font-size:.875rem;font-weight:600;list-style-type:none;margin-bottom:8px;padding:0 10px;word-wrap:break-word}
 .alert.primary{background:#85b7e7;border:1px solid #3085d6;color:#1a5186}
 .alert.secondary{background:#80cb92;border:1px solid #42a35a;color:#255a32}
@@ -1237,10 +1234,11 @@ table.rounded tbody tr:last-child td:last-child,table.rounded thead~tr:last-chil
 table.rounded tbody tr:last-child td:first-child,table.rounded thead~tr:last-child td:first-child{border-bottom-left-radius:4px}
 table.rounded>tbody:first-child tr:first-child td,table.rounded caption+tbody tr:first-child td,table.rounded thead td,table.rounded thead th{border-top:0}
 .ttip{cursor:pointer;position:relative}
-.ttip:after{-moz-border-radius:3px;-moz-box-shadow:0 0 5px 0 rgba(48,133,214,.25);-webkit-border-radius:3px;-webkit-box-shadow:0 0 5px 0 rgba(48,133,214,.25);background:#3085d6;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSIuNSIgeDI9Ii41IiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY1YTRlMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMwODVkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYSkiLz48L3N2Zz4=");background-image:linear-gradient(180deg,#65a4e1,#3085d6);background-size:100%;border:1px solid #3085d6;border-bottom:0;border-radius:3px;box-shadow:0 0 5px 0 rgba(48,133,214,.25);color:#fff;content:attr(data-tooltip);display:block;font-size:16px;font-style:normal;font-weight:400;left:0;line-height:1.5;margin-bottom:8px;max-width:500px;min-width:130px;padding:.5em .75em;text-align:left;width:auto}
-.ttip:after,.ttip:before{-moz-transition:opacity .1s ease;-o-transition:opacity .1s ease;-webkit-transition:opacity .1s ease;bottom:101%;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;pointer-events:none;position:absolute;transition:opacity .1s ease}
+.ttip:after{-moz-border-radius:3px;-moz-box-shadow:0 0 5px 0 rgba(48,133,214,.25);-moz-transition:opacity .1s ease;-o-transition:opacity .1s ease;-webkit-border-radius:3px;-webkit-box-shadow:0 0 5px 0 rgba(48,133,214,.25);-webkit-transition:opacity .1s ease;background:#3085d6;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSIuNSIgeDI9Ii41IiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY1YTRlMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMwODVkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYSkiLz48L3N2Zz4=");background-image:linear-gradient(180deg,#65a4e1,#3085d6);background-size:100%;border:1px solid #3085d6;border-bottom:0;border-radius:3px;box-shadow:0 0 5px 0 rgba(48,133,214,.25);color:#fff;content:attr(data-tooltip);display:block;font-size:16px;font-style:normal;font-weight:400;left:0;line-height:1.5;margin-bottom:8px;max-width:500px;min-width:130px;padding:.5em .75em;text-align:left;transition:opacity .1s ease;width:auto}
+.ttip:after,.ttip:before{bottom:101%;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;pointer-events:none;position:absolute}
 .ttip:before{border-left:9px solid transparent;border-right:9px solid transparent;border-top:9px solid #3085d6!important;content:" ";height:0;left:8px;width:0}
-.ttip:hover:after,.ttip:hover:before{-moz-transition:opacity .1s ease;-o-transition:opacity .1s ease;-webkit-transition:opacity .1s ease;filter:progid:DXImageTransform.Microsoft.Alpha(enabled=false);opacity:1;transition:opacity .1s ease}
+.ttip:before,.ttip:hover:after,.ttip:hover:before{transition:opacity .1s ease}
+.ttip:hover:after,.ttip:hover:before{filter:progid:DXImageTransform.Microsoft.Alpha(enabled=false);opacity:1}
 @media only screen and (max-width:768px){
   .ttip:after,.ttip:before{display:none}
 }

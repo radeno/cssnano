@@ -4,9 +4,8 @@ img{max-width:100%}
 svg{max-height:100%}
 fieldset,input,select,textarea{font-size:1rem;margin-bottom:.5rem;margin-top:0}
 input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week]{-webkit-appearance:none;box-sizing:border-box;height:2.25rem;padding:.5rem;vertical-align:middle}
-select{box-sizing:border-box;line-height:1.75;padding:.5rem}
+select,textarea{box-sizing:border-box;line-height:1.75;padding:.5rem}
 select:not([multiple]){height:2.25rem;vertical-align:middle}
-textarea{box-sizing:border-box;line-height:1.75;padding:.5rem}
 .fieldset-reset{border:0;margin-left:0;margin-right:0;padding:0}
 .fieldset-reset legend{padding:0}
 .button,button{-webkit-appearance:none;border:1px solid transparent;cursor:pointer;display:inline-block;font-size:inherit;font-weight:700;height:auto;line-height:1.125rem;margin:0;padding:.5rem 1rem;text-decoration:none;vertical-align:middle}
@@ -14,17 +13,17 @@ textarea{box-sizing:border-box;line-height:1.75;padding:.5rem}
 ::-moz-focus-inner{border:0;padding:0}
 .button:hover{text-decoration:none}
 table{border-collapse:separate;border-spacing:0;max-width:100%;width:100%}
-th{font-weight:700;text-align:left}
+th{font-weight:700;text-align:left;vertical-align:bottom}
 td,th{line-height:inherit;padding:.25rem 1rem}
-th{vertical-align:bottom}
 td{vertical-align:top}
 body{font-size:100%;line-height:1.5}
 body,h1,h2,h3,h4,h5,h6{font-family:Helvetica Neue,Helvetica,sans-serif}
 h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.25;margin-bottom:.5em;margin-top:1em}
-dl,ol,p,ul{font-size:1rem;margin-bottom:1rem;margin-top:0}
+dl,ol,p,ul{font-size:1rem}
 ol,ul{padding-left:2rem}
 code,pre,samp{font-family:Source Code Pro,Consolas,monospace;font-size:inherit}
-pre{margin-bottom:1rem;margin-top:0;overflow-x:scroll}
+dl,ol,p,pre,ul{margin-bottom:1rem;margin-top:0}
+pre{overflow-x:scroll}
 blockquote,hr{margin-bottom:2rem;margin-top:2rem}
 blockquote{margin-left:0;padding-left:1rem;padding-right:1rem}
 blockquote,blockquote p{font-size:1.25rem;font-style:italic}
